@@ -8,8 +8,9 @@ function Pig({ name, image,  specialty, greased, weight, highestMedalAchieved })
   }
 
   return (
-    <div className="pigTile" onClick={() => onTileClick()}>
-      <div className="pigTile h3">{name}</div>
+  <div className="pigTile">
+    <div onClick={() => onTileClick()}>
+      <div className="smallHeader">{name}</div>
       <img src={image} className="minPigTile"></img>
       {isDetails ?
         <ul>Details:
@@ -19,6 +20,7 @@ function Pig({ name, image,  specialty, greased, weight, highestMedalAchieved })
           <li>Higest Medal: {highestMedalAchieved}</li>
         </ul> : ""}
     </div>
+  </div>
   )
 }
 

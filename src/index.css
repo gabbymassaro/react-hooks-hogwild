@@ -41,7 +41,7 @@ body {
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
-  color: #3B0B0B;
+  color: #F5A9BC;
 }
 
 .normalText {
@@ -124,9 +124,9 @@ ul {
   height: 500px;
 }
 
-.pigTile:hover {
+/* .pigTile:hover {
   transform: scale(1.05);
-}
+} */
 
 
 .App-logo {
