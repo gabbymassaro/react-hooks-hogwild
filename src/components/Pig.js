@@ -17,7 +17,7 @@ function Pig({ name, image,  specialty, greased, weight, highestMedalAchieved })
           <li>Specialty: {specialty}</li>
           <li>Greased: {greased}</li>
           <li>Weight: {weight} lbs</li>
-          <li>Higest Medal: {highestMedalAchieved}</li>
+          <li>Highest Medal: {highestMedalAchieved}</li>
         </ul> : ""}
     </div>
   </div>
