@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
 import PigTiles from './PigTiles'
+import Pig from './Pig'
 
 import hogs from "../porkers_data";
 
@@ -14,6 +15,7 @@ function App() {
         hogData={hogData}
         setHogData={setHogData}
       />
+      <Pig />
 		</div>
 	);
 }
