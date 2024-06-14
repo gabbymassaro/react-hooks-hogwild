@@ -1,9 +1,14 @@
 import React from "react";
 
-function Pig({ name, image,  specialty, greased, weigth, highestMedalAchieved}) {
+function Pig({ name, image,  specialty, greased, weigth, highestMedalAchieved }) {
 
   function onTileClick() {
-    console.log()
+    console.log(
+      `Pig Details: Specialty = ${specialty},
+      Greased = ${greased},
+      Weight = ${weigth},
+      HighestMedalAcheived = ${highestMedalAchieved}
+    `)
   }
 
   return (
