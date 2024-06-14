@@ -9,8 +9,8 @@ function PigTiles({ hogData }) {
           key={index}
           name={hog.name}
           specialty={hog.specialty}
-          greased={hog.greased}
-          weigth={hog.weight}
+          greased={hog.greased ? 'Yes' : 'No'}
+          weight={hog.weight}
           image={hog.image}
           highestMedalAchieved={hog["highest medal achieved"]} />
       ))}
