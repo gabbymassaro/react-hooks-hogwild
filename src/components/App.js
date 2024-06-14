@@ -19,7 +19,11 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-      <button onClick={handleFilterChange}>Greasy?</button>
+      <div className="smallHeader">{hogData === hogs ? 'All Pigs' : 'Greasy Pigs'} </div>
+      <br></br>
+      <button className="normalText" onClick={handleFilterChange}>
+          {hogData === hogs ? 'Greasy' : 'All'}
+        </button>
       <PigTiles
         hogData={hogData}
         setHogData={setHogData}
