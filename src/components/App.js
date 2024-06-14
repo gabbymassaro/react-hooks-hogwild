@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
-import PigTiles from './PigTiles'
+import Form from './Form';
+import PigTiles from './PigTiles';
 
 import hogs from "../porkers_data";
 
@@ -37,6 +38,7 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
+      <Form />
       <div>
         <button className="normalText" onClick={handleFilterChange}>Greasy?</button>
         <button className="normalText" onClick={handleSortingNames}>Sort By Name</button>
