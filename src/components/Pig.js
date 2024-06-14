@@ -2,16 +2,23 @@ import React, { useState } from "react";
 
 function Pig({ name, image,  specialty, greased, weight, highestMedalAchieved }) {
   const [isDetails, setIsDetails] = useState(false)
+  const [isChecked, setIsChecked] = useState(false)
 
   function onTileClick() {
     setIsDetails((isDetails) => !isDetails)
   }
 
+  function onCheckBox() {
+    setIsChecked((isChecked) => !isChecked)
+  }
+
   return (
   <div className="pigTile">
-    <div onClick={() => onTileClick()}>
+    <input type="checkbox" value="hide" onChange={onCheckBox}></input>
+    <label>Hide</label>
+    <div onClick={onTileClick}>
       <div className="smallHeader">{name}</div>
-      <img src={image} className="minPigTile"></img>
+      {isChecked ? "" : <img src={image} className="minPigTile" alt="pig"></img>}
       {isDetails ?
         <ul>Details:
           <li>Specialty: {specialty}</li>
