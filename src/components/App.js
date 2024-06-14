@@ -37,13 +37,11 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-      <div className="smallHeader">{hogData === hogs ? 'All Pigs' : 'Greasy Pigs'} </div>
-      <br></br>
-      <button className="normalText" onClick={handleFilterChange}>
-          {hogData === hogs ? 'Greasy?' : 'All Pigs'}
-      </button>
-      <button className="normalText" onClick={handleSortingNames}>Sort By Name</button>
-      <button className="normalText" onClick={handleSortingWeight}>Sort By Weight</button>
+      <div>
+        <button className="normalText" onClick={handleFilterChange}>Greasy?</button>
+        <button className="normalText" onClick={handleSortingNames}>Sort By Name</button>
+        <button className="normalText" onClick={handleSortingWeight}>Sort By Weight</button>
+      </div>
       <PigTiles
         hogData={hogData}
         setHogData={setHogData}
