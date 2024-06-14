@@ -1,19 +1,18 @@
 import React from "react";
 import Pig from './Pig'
 
-function PigTiles({ hogs }) {
-
-  console.log(hogs)
+function PigTiles({ hogData }) {
   return (
     <div className="pigTile">
-      {hogs.map((hog, index) => (
+      {hogData.map((hog, index) => (
         <Pig
           key={index}
           name={hog.name}
           specialty={hog.specialty}
           greased={hog.greased}
           weigth={hog.weight}
-          image={hog.image} />
+          image={hog.image}
+          highestMedalAchieved={hog["highest medal achieved"]} />
       ))}
     </div>
   )
