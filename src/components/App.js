@@ -8,14 +8,18 @@ function App() {
   const [hogData, setHogData] = useState(hogs)
 
   function handleFilterChange() {
-    const greasy = hogData.filter((hog) => hog.greased === true)
-    setHogData(greasy)
+    if (hogData === hogs) {
+      const greasy = hogData.filter((hog) => hog.greased === true)
+      setHogData(greasy)
+    } else {
+      setHogData(hogs)
+    }
   }
 
 	return (
 		<div className="App">
 			<Nav />
-      <button onClick={() => handleFilterChange()}>Greasy?</button>
+      <button onClick={handleFilterChange}>Greasy?</button>
       <PigTiles
         hogData={hogData}
         setHogData={setHogData}
